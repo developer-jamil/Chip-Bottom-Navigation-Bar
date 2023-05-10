@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="home">#1A649F</color>
+    <color name="message">#E91E63</color>
+    <color name="profile">#0831FF</color>
+    <color name="setting">#9C27B0</color>
+
+    <color name="home_20">#331A649F</color>
+    <color name="message_20">#33E91E63</color>
+    <color name="profile_20">#330831FF</color>
+    <color name="setting_20">#339C27B0</color>
+
+</resources>
