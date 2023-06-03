@@ -18,13 +18,14 @@ import com.jamillabltd.chipbototmnavigationbar.bottom_bar_fragments.SettingFragm
 
 public class MainActivity extends AppCompatActivity {
     private int selectedTab = 1;
+    LinearLayout homeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final LinearLayout homeLayout = findViewById(R.id.homeLayout);
+        homeLayout = findViewById(R.id.homeLayout);
         final LinearLayout messageLayout = findViewById(R.id.messageLayout);
         final LinearLayout profileLayout = findViewById(R.id.profileLayout);
         final LinearLayout settingLayout = findViewById(R.id.settingLayout);
@@ -206,7 +207,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        // Check if the current fragment is the home fragment
+        if (selectedTab == 1) {
+            super.onBackPressed(); // Exit the app directly
+        } else {
+            // Navigate back to the home fragment
+            homeLayout.performClick();
+        }
     }
 }
